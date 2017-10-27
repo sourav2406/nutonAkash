@@ -1,5 +1,5 @@
 def printTree(root):
     if root:
-        print(root.val)
+        print(root.val, end='')
         printTree(root.left)
         printTree(root.right)
