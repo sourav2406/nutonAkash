@@ -15,11 +15,10 @@ class Stack:
         newNode = StackNode(data)
         newNode.next = self.root
         self.root = newNode
-        print("New node added succesfully!!!")
+        #print("New node added succesfully!!!")
 
     def pop(self):
-        if self.is_empty is True:
-            print("Stack is empty!!!!")
+        if self.is_empty():
             return -1
         else:
             poped = self.root.data
@@ -27,13 +26,12 @@ class Stack:
             return poped
 
     def peek(self):
-        if self.is_empty is True:
-            print("Stack is empty!!!")
+        if self.is_empty():
             return -1
         return self.root.data
 
     def printStack(self):
-        if self.is_empty is True:
+        if self.is_empty():
             print("Stack is empty!!!")
             return -1
         node = self.root
@@ -41,6 +39,9 @@ class Stack:
             print(node.data, end=' ')
             node = node.next
         print('\n')
+
+    def is_last(self):
+        return True if self.root.next is None else False
 
 
 #driver programe for this module
@@ -54,4 +55,9 @@ if __name__ == '__main__':
     stack.printStack()
     stack.pop()
     stack.printStack()
+    stack.pop()
+    stack.printStack()
+    stack.pop()
+    stack.printStack()
+    stack.pop()
 
