@@ -23,7 +23,7 @@ def diameter(root):
 
     return max(lheight+rheight+1,max(ldiameter, rdiameter))
 
-#Driver program
+#Driver program 
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
